@@ -1,0 +1,2 @@
+Get-WMIObject -Query "SELECT * FROM Win32_Product" | Select-Object Name, Vendor | Sort-Object Name | Format-Table | Tee-Object -FilePath C:\Windows\Temp\installed_apps.csv
+Get-AppxPackage | Select-Object Name, Publisher | Sort-Object Name | Format-Table | Tee-Object C:\Windows\Temp\store_apps.csv
